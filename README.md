@@ -32,7 +32,13 @@ Legend
 
 ✅ Recently Shipped
 
-Core Infrastructure & Orchestration
+AI & Automation
+
+🚀 Saddle Data AI SRE: Autonomous error diagnosis for failed flows. It analyzes worker logs to explain failures in plain English and automatically escalates internal platform issues to support.
+
+Core Infrastructure & Security
+
+🚀 Security: Two-Factor Authentication (2FA/MFA): Secured user accounts with TOTP-based authentication (Google Authenticator, Authy, etc.).
 
 🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure. Zero-trust architecture with outbound-only polling.
 
@@ -40,7 +46,9 @@ Core Infrastructure & Orchestration
 
 🚀 Observability & Visualization: Visual graph view of your flow dependencies and detailed execution traces.
 
-Transformations
+Transformations & Activation
+
+🚀 Reverse ETL Templates: Pre-built patterns for syncing warehouse data back to operational tools (Salesforce/HubSpot).
 
 🚀 dbt Core Integration: Native support for running dbt projects immediately after data ingestion. Includes secure Git authentication and dynamic version management.
 
@@ -48,31 +56,31 @@ Transformations
 
 New Connectors
 
-🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
-
-🚀 Databricks Destination: Native integration for Delta Lake.
+🚀 Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
 
 🚀 Webhook Source: High-throughput event ingestion gateway with built-in rate limiting and buffering (Redis-backed).
 
 🚀 MongoDB Source: Automatic flattening of BSON documents to SQL tables.
 
+🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
+
+🚀 Databricks Destination: Native integration for Delta Lake.
+
 🚧 In Progress
 
-Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
-
-Reverse ETL Patterns: Templates for syncing warehouse data back to operational tools (Salesforce/HubSpot).
+ClickHouse Destination: Real-time analytical database support. (Moved from Later due to high affinity with Webhook source).
 
 📝 Next (Up Next)
 
-Security: Two-Factor Authentication (2FA/MFA): Add support for users to secure their accounts with an authenticator app.
-
-Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model for easier one-click onboarding.
+AI Data Mapper: Intelligent schema inference that profiles source data (e.g., JSON/MongoDB) and auto-suggests optimal mappings, flattening strategies, and data types.
 
 Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
 
+Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model for easier one-click onboarding.
+
 💡 Later / Ideas
 
-ClickHouse Destination: Real-time analytical database support.
+Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
 
 S3 / GCS Data Lake Destination: Outputting data as Parquet/Iceberg files.
 
