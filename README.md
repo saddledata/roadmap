@@ -34,6 +34,8 @@ Legend
 
 AI & Automation
 
+🚀 Intelligent Data Mapper: Smart schema inference right in the flow editor that profiles source data and auto-suggests optimal mappings and data types.
+
 🚀 Saddle Data AI SRE: Autonomous error diagnosis for failed flows. It analyzes worker logs to explain failures in plain English and automatically escalates internal platform issues to support.
 
 Core Infrastructure & Security
@@ -72,7 +74,7 @@ ClickHouse Destination: Real-time analytical database support. (Moved from Later
 
 📝 Next (Up Next)
 
-AI Data Mapper: Intelligent schema inference that profiles source data (e.g., JSON/MongoDB) and auto-suggests optimal mappings, flattening strategies, and data types.
+Data Observability & Alerting Engine: Event-based routing for pipeline health. Configure webhooks and emails to trigger on critical events like flow.failed, flow.zero_rows_synced, or flow.schema_drift.
 
 Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
 
@@ -80,8 +82,10 @@ Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model fo
 
 💡 Later / Ideas
 
+Developer API & Token Management: API token generation to allow programmatic access to Saddle Data. Initial endpoints will include querying flow run status and retrieving pipeline observability events.
+
 Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
 
 S3 / GCS Data Lake Destination: Outputting data as Parquet/Iceberg files.
 
-Git Source: Analytics for engineering metrics (PRs, Commits).
+GitOps (Flows as Code): Manage Saddle Data pipeline configurations natively via Git pull requests.
