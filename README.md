@@ -32,6 +32,12 @@ Legend
 
 ✅ Recently Shipped
 
+Observability & Monitoring
+
+🚀 Observability & Alerting Engine: Real-time Activity Feed and customizable Alert Rules for tracking pipeline health. Create global or flow-specific alerts for failures, schema drift, and system events.
+
+🚀 Remote Agent Monitoring: Heartbeat tracking for self-hosted agents with automated "Agent Offline" alerting if an agent misses check-ins for 5 minutes.
+
 AI & Automation
 
 🚀 Intelligent Data Mapper: Smart schema inference right in the flow editor that profiles source data and auto-suggests optimal mappings and data types.
@@ -45,8 +51,6 @@ Core Infrastructure & Security
 🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure. Zero-trust architecture with outbound-only polling.
 
 🚀 Lightweight Orchestration (DAGs): Chain flows together (e.g., Run Flow B only after Flow A succeeds) to build reliable data dependencies.
-
-🚀 Observability & Visualization: Visual graph view of your flow dependencies and detailed execution traces.
 
 Transformations & Activation
 
@@ -74,13 +78,19 @@ ClickHouse Destination: Real-time analytical database support. (Moved from Later
 
 📝 Next (Up Next)
 
-Data Observability & Alerting Engine: Event-based routing for pipeline health. Configure webhooks and emails to trigger on critical events like flow.failed, flow.zero_rows_synced, or flow.schema_drift.
+Webhook & Slack Alert Destinations: Expanding the Alerting Engine to support generic webhooks and native Slack integrations.
 
 Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
 
 Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model for easier one-click onboarding.
 
 💡 Later / Ideas
+
+Vector Database Destinations: Connectors for Pinecone, Weaviate, and Milvus to power AI RAG (Retrieval-Augmented Generation) directly from operational data.
+
+Unstructured Data Parsing (AI Ingestion): Ingest PDFs, Word docs, and images from S3/Google Drive, using AI to extract structured JSON on the fly.
+
+Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself (e.g., alert if a critical column suddenly returns 80% NULL values).
 
 Developer API & Token Management: API token generation to allow programmatic access to Saddle Data. Initial endpoints will include querying flow run status and retrieving pipeline observability events.
 
