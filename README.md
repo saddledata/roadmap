@@ -32,6 +32,20 @@ Legend
 
 ✅ Recently Shipped
 
+New Connectors
+
+🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
+
+🚀 Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
+
+🚀 Webhook Source: High-throughput event ingestion gateway with built-in rate limiting and buffering (Redis-backed).
+
+🚀 MongoDB Source: Automatic flattening of BSON documents to SQL tables.
+
+🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
+
+🚀 Databricks Destination: Native integration for Delta Lake.
+
 Observability & Monitoring
 
 🚀 Observability & Alerting Engine: Real-time Activity Feed and customizable Alert Rules for tracking pipeline health. Create global or flow-specific alerts for failures, schema drift, and system events.
@@ -60,21 +74,9 @@ Transformations & Activation
 
 🚀 Visual Schema Mapping: Explicit control over destination column types (Schema Mapping) with intelligent implicit casting for data cleanup.
 
-New Connectors
-
-🚀 Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
-
-🚀 Webhook Source: High-throughput event ingestion gateway with built-in rate limiting and buffering (Redis-backed).
-
-🚀 MongoDB Source: Automatic flattening of BSON documents to SQL tables.
-
-🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
-
-🚀 Databricks Destination: Native integration for Delta Lake.
-
 🚧 In Progress
 
-ClickHouse Destination: Real-time analytical database support. (Moved from Later due to high affinity with Webhook source).
+(Currently pulling items from Up Next into our active sprint!)
 
 📝 Next (Up Next)
 
@@ -85,6 +87,8 @@ Fanout DAG Dependencies: Support for triggering multiple downstream flows from a
 Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model for easier one-click onboarding.
 
 💡 Later / Ideas
+
+ClickHouse Source: Reverse ETL capabilities to extract aggregated metrics from ClickHouse and sync them back to operational tools.
 
 Vector Database Destinations: Connectors for Pinecone, Weaviate, and Milvus to power AI RAG (Retrieval-Augmented Generation) directly from operational data.
 
