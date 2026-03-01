@@ -36,11 +36,13 @@ Real-Time Enterprise Streaming
 
 🚀 High-Performance Stream Agents: Double-buffered architecture with asynchronous stats reporting, enabling high-volume bursts and sub-second latency for enterprise streaming flows.
 
-🚀 WebSocket Gateway Optimization: Tuned the stream-gateway for larger fetch sizes and reduced latency, including automatic ws:// to wss:// protocol upgrades for seamless traversal through cloud load balancers.
+🚀 WebSocket Gateway Optimization: Tuned the stream-gateway for larger fetch sizes and reduced latency, including automatic ws:// to wss:// protocol upgrades.
 
 🚀 Streaming UI Dashboard: Tailored Flow Detail pages specifically for real-time throughput, hiding irrelevant batch metrics and replacing them with persistent Total Rows and Total Errors counters.
 
 New Connectors
+
+🚀 Google Sheets Source: Directly ingest data from Google Workspace spreadsheets (Pending final Google OAuth verification).
 
 🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
 
@@ -58,13 +60,13 @@ Observability & Monitoring
 
 🚀 Advanced Streaming Observability: Ingestion error tracking detects webhook failures (e.g., rate limits/body read errors) and pushes them directly to the flow's health dashboard.
 
-🚀 Observability & Alerting Engine: Real-time Activity Feed and Alert Rules. All stream lifecycle events (Success, Failure, Recovery, Warnings) provide a clear audit trail.
+🚀 Observability & Alerting Engine: Real-time Activity Feed and Alert Rules. All stream lifecycle events provide a clear audit trail.
 
 🚀 Remote Agent Monitoring: Heartbeat tracking for self-hosted agents with automated "Agent Offline" alerting.
 
 Core Infrastructure & Security
 
-🚀 Agent Resilience & Self-Healing: Non-blocking connection logic prevents panics during destination DB blips. Includes automatic reconciliation loops to restart failed streams and handle "zombie" consumers.
+🚀 Agent Resilience & Self-Healing: Non-blocking connection logic prevents panics during destination DB blips. Includes automatic reconciliation loops.
 
 🚀 Developer Experience (DX): Streamlined local agent testing with SADDLEDATA_SKIP_TLS_VERIFY and standardized API URL environment variables.
 
@@ -74,9 +76,9 @@ Core Infrastructure & Security
 
 AI & Automation
 
-🚀 Intelligent Data Mapper: Smart schema inference right in the flow editor that profiles source data and auto-suggests optimal mappings and data types.
+🚀 Intelligent Auto-Map: Your personal AI Data Scientist that handles schema profiling, normalization, and suggests multi-table pipeline structures on the fly.
 
-🚀 Saddle Data AI SRE: Autonomous error diagnosis for failed flows. It analyzes worker logs to explain failures in plain English.
+🚀 Saddle Data AI SRE: Autonomous error diagnosis. Analyzes worker logs to explain failures in plain English and provides step-by-step remediation (e.g., fixing schema drift).
 
 Transformations & Activation
 
@@ -84,7 +86,7 @@ Transformations & Activation
 
 🚀 dbt Core Integration: Native support for running dbt projects immediately after data ingestion.
 
-🚀 Visual Schema Mapping: Explicit control over destination column types (Schema Mapping) with intelligent implicit casting.
+🚀 Visual Schema Mapping: Explicit control over destination column types with intelligent implicit casting.
 
 🚧 In Progress
 
@@ -96,22 +98,28 @@ Webhook & Slack Alert Destinations: Expanding the Alerting Engine to support gen
 
 Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
 
-Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model for easier one-click onboarding.
+Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model.
 
 💡 Later / Ideas
 
+Marketing & Sales Connectors: * Google Search Console (Source)
+
+Apollo.io (Source)
+
+YouTube Analytics API (Source)
+
+Enterprise Spreadsheet Connectors: Microsoft Excel / Office 365 (Source).
+
 ClickHouse Source: Reverse ETL capabilities to extract aggregated metrics from ClickHouse and sync them back to operational tools.
 
-Vector Database Destinations: Connectors for Pinecone, Weaviate, and Milvus to power AI RAG (Retrieval-Augmented Generation) directly from operational data.
+Vector Database Destinations: Connectors for Pinecone, Weaviate, and Milvus to power AI RAG directly from operational data.
 
 Unstructured Data Parsing (AI Ingestion): Ingest PDFs, Word docs, and images from S3/Google Drive, using AI to extract structured JSON on the fly.
 
-Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself (e.g., alert if a critical column suddenly returns 80% NULL values).
+Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself.
 
 Developer API & Token Management: API token generation to allow programmatic access to Saddle Data.
 
 Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
-
-S3 / GCS Data Lake Destination: Outputting data as Parquet/Iceberg files.
 
 GitOps (Flows as Code): Manage Saddle Data pipeline configurations natively via Git pull requests.
