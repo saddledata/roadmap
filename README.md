@@ -32,6 +32,14 @@ Legend
 
 ✅ Recently Shipped
 
+Real-Time Enterprise Streaming
+
+🚀 High-Performance Stream Agents: Double-buffered architecture with asynchronous stats reporting, enabling high-volume bursts and sub-second latency for enterprise streaming flows.
+
+🚀 WebSocket Gateway Optimization: Tuned the stream-gateway for larger fetch sizes and reduced latency, including automatic ws:// to wss:// protocol upgrades for seamless traversal through cloud load balancers.
+
+🚀 Streaming UI Dashboard: Tailored Flow Detail pages specifically for real-time throughput, hiding irrelevant batch metrics and replacing them with persistent Total Rows and Total Errors counters.
+
 New Connectors
 
 🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
@@ -48,35 +56,39 @@ New Connectors
 
 Observability & Monitoring
 
-🚀 Observability & Alerting Engine: Real-time Activity Feed and customizable Alert Rules for tracking pipeline health. Create global or flow-specific alerts for failures, schema drift, and system events.
+🚀 Advanced Streaming Observability: Ingestion error tracking detects webhook failures (e.g., rate limits/body read errors) and pushes them directly to the flow's health dashboard.
 
-🚀 Remote Agent Monitoring: Heartbeat tracking for self-hosted agents with automated "Agent Offline" alerting if an agent misses check-ins for 5 minutes.
+🚀 Observability & Alerting Engine: Real-time Activity Feed and Alert Rules. All stream lifecycle events (Success, Failure, Recovery, Warnings) provide a clear audit trail.
+
+🚀 Remote Agent Monitoring: Heartbeat tracking for self-hosted agents with automated "Agent Offline" alerting.
+
+Core Infrastructure & Security
+
+🚀 Agent Resilience & Self-Healing: Non-blocking connection logic prevents panics during destination DB blips. Includes automatic reconciliation loops to restart failed streams and handle "zombie" consumers.
+
+🚀 Developer Experience (DX): Streamlined local agent testing with SADDLEDATA_SKIP_TLS_VERIFY and standardized API URL environment variables.
+
+🚀 Security: Two-Factor Authentication (2FA/MFA): Secured user accounts with TOTP-based authentication.
+
+🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure with zero-trust outbound-only polling.
 
 AI & Automation
 
 🚀 Intelligent Data Mapper: Smart schema inference right in the flow editor that profiles source data and auto-suggests optimal mappings and data types.
 
-🚀 Saddle Data AI SRE: Autonomous error diagnosis for failed flows. It analyzes worker logs to explain failures in plain English and automatically escalates internal platform issues to support.
-
-Core Infrastructure & Security
-
-🚀 Security: Two-Factor Authentication (2FA/MFA): Secured user accounts with TOTP-based authentication (Google Authenticator, Authy, etc.).
-
-🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure. Zero-trust architecture with outbound-only polling.
-
-🚀 Lightweight Orchestration (DAGs): Chain flows together (e.g., Run Flow B only after Flow A succeeds) to build reliable data dependencies.
+🚀 Saddle Data AI SRE: Autonomous error diagnosis for failed flows. It analyzes worker logs to explain failures in plain English.
 
 Transformations & Activation
 
-🚀 Reverse ETL Templates: Pre-built patterns for syncing warehouse data back to operational tools (Salesforce/HubSpot).
+🚀 Reverse ETL Templates: Pre-built patterns for syncing warehouse data back to operational tools.
 
-🚀 dbt Core Integration: Native support for running dbt projects immediately after data ingestion. Includes secure Git authentication and dynamic version management.
+🚀 dbt Core Integration: Native support for running dbt projects immediately after data ingestion.
 
-🚀 Visual Schema Mapping: Explicit control over destination column types (Schema Mapping) with intelligent implicit casting for data cleanup.
+🚀 Visual Schema Mapping: Explicit control over destination column types (Schema Mapping) with intelligent implicit casting.
 
 🚧 In Progress
 
-(Currently pulling items from Up Next into our active sprint!)
+Self-Serve UI Telemetry: Implementing a lightweight, first-party tracking SDK to pipe UI usage data directly into our own real-time streaming infrastructure for dogfooding and analytics.
 
 📝 Next (Up Next)
 
@@ -96,7 +108,7 @@ Unstructured Data Parsing (AI Ingestion): Ingest PDFs, Word docs, and images fro
 
 Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself (e.g., alert if a critical column suddenly returns 80% NULL values).
 
-Developer API & Token Management: API token generation to allow programmatic access to Saddle Data. Initial endpoints will include querying flow run status and retrieving pipeline observability events.
+Developer API & Token Management: API token generation to allow programmatic access to Saddle Data.
 
 Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
 
