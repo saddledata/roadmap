@@ -102,6 +102,12 @@ Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model.
 
 💡 Later / Ideas
 
+Cloud Storage & Data Lakes:
+
+AWS S3 / GCS Source: Read Parquet, Apache Iceberg, JSON, and CSV files directly from cloud storage buckets to hydrate data warehouses.
+
+AWS S3 / GCS Destination: Outputting operational data as Parquet/Iceberg files into the Data Lake.
+
 Marketing & Sales Connectors: * Google Search Console (Source)
 
 Apollo.io (Source)
