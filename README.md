@@ -32,6 +32,32 @@ Legend
 
 ✅ Recently Shipped
 
+AI Data Infrastructure
+
+🚀 Vector Database Destinations: Native sinking to Pinecone, Qdrant, Milvus, and PostgreSQL (pgvector) to power AI RAG directly from operational data.
+
+🚀 In-Flight AI Embeddings: Zero-config Google Gemini and OpenAI (BYOK) embedding middleware. Transform text columns into dense mathematical vectors in transit without custom Python scripts.
+
+Enterprise & Analytics Connectors
+
+🚀 Enterprise SFTP (Source & Destination): Secure file transfer protocol support for legacy system integration and partner data exchange (CSV, JSON, JSONL) with smart auto-type inference.
+
+🚀 Email & Excel Delivery (Destination): Automated Reverse ETL delivery of formatted Microsoft Excel (.xlsx) and CSV reports directly to executive inboxes via SMTP2Go/SendGrid.
+
+🚀 Google Sheets Source: Directly ingest data from Google Workspace spreadsheets.
+
+🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
+
+🚀 Databricks Destination: Native integration for Delta Lake.
+
+🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
+
+🚀 Webhook Source: High-throughput event ingestion gateway with built-in rate limiting and buffering (Redis-backed).
+
+🚀 MongoDB Source: Automatic flattening of BSON documents to SQL tables.
+
+🚀 Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
+
 Real-Time Enterprise Streaming
 
 🚀 High-Performance Stream Agents: Double-buffered architecture with asynchronous stats reporting, enabling high-volume bursts and sub-second latency for enterprise streaming flows.
@@ -40,23 +66,9 @@ Real-Time Enterprise Streaming
 
 🚀 Streaming UI Dashboard: Tailored Flow Detail pages specifically for real-time throughput, hiding irrelevant batch metrics and replacing them with persistent Total Rows and Total Errors counters.
 
-New Connectors
-
-🚀 Google Sheets Source: Directly ingest data from Google Workspace spreadsheets (Pending final Google OAuth verification).
-
-🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
-
-🚀 Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
-
-🚀 Webhook Source: High-throughput event ingestion gateway with built-in rate limiting and buffering (Redis-backed).
-
-🚀 MongoDB Source: Automatic flattening of BSON documents to SQL tables.
-
-🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
-
-🚀 Databricks Destination: Native integration for Delta Lake.
-
 Observability & Monitoring
+
+🚀 Self-Serve UI Telemetry: Lightweight, first-party tracking SDK piping UI usage data and backend system_events directly into our own ClickHouse analytics tables for end-to-end user journey visibility.
 
 🚀 Advanced Streaming Observability: Ingestion error tracking detects webhook failures (e.g., rate limits/body read errors) and pushes them directly to the flow's health dashboard.
 
@@ -70,17 +82,15 @@ Core Infrastructure & Security
 
 🚀 Developer Experience (DX): Streamlined local agent testing with SADDLEDATA_SKIP_TLS_VERIFY and standardized API URL environment variables.
 
-🚀 Security: Two-Factor Authentication (2FA/MFA): Secured user accounts with TOTP-based authentication.
+🚀 Security (2FA/MFA): Secured user accounts with TOTP-based authentication.
 
 🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure with zero-trust outbound-only polling.
 
-AI & Automation
+Transformations & Activation
 
 🚀 Intelligent Auto-Map: Your personal AI Data Scientist that handles schema profiling, normalization, and suggests multi-table pipeline structures on the fly.
 
 🚀 Saddle Data AI SRE: Autonomous error diagnosis. Analyzes worker logs to explain failures in plain English and provides step-by-step remediation (e.g., fixing schema drift).
-
-Transformations & Activation
 
 🚀 Reverse ETL Templates: Pre-built patterns for syncing warehouse data back to operational tools.
 
@@ -90,42 +100,38 @@ Transformations & Activation
 
 🚧 In Progress
 
-Self-Serve UI Telemetry: Implementing a lightweight, first-party tracking SDK to pipe UI usage data directly into our own real-time streaming infrastructure for dogfooding and analytics.
+🚧 Cloud Storage & Data Lakes (AWS S3 / GCS): Building an "S3 Bucket Watcher" for robust file-drop ingestion (CSV/JSON/Parquet), and partitioned file writers for destination lakes. (This is a core prerequisite for our upcoming Redshift integration).
 
 📝 Next (Up Next)
 
-Webhook & Slack Alert Destinations: Expanding the Alerting Engine to support generic webhooks and native Slack integrations.
+📝 Amazon Redshift (Destination): High-performance enterprise loading utilizing AWS S3 internal staging and native Redshift COPY commands for massive ingestion scale.
 
-Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
+📝 Webhook & Slack Alert Destinations: Expanding the Alerting Engine to support generic webhooks and native Slack integrations.
 
-Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model.
+📝 Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
+
+📝 Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model.
 
 💡 Later / Ideas
 
-Cloud Storage & Data Lakes:
+New Connectors
 
-AWS S3 / GCS Source: Read Parquet, Apache Iceberg, JSON, and CSV files directly from cloud storage buckets to hydrate data warehouses.
+💡 Amazon Redshift (Source): Extracting aggregated analytics models out of Redshift for operational syncing.
 
-AWS S3 / GCS Destination: Outputting operational data as Parquet/Iceberg files into the Data Lake.
+💡 Enterprise Spreadsheet Connectors: Microsoft Excel / Office 365 (OneDrive/SharePoint) via Microsoft Graph OAuth.
 
-Marketing & Sales Connectors: * Google Search Console (Source)
+💡 Marketing & Sales Connectors: Google Search Console, Apollo.io, YouTube Analytics API.
 
-Apollo.io (Source)
+💡 ClickHouse Source: Reverse ETL capabilities to extract aggregated metrics from ClickHouse and sync them back to operational tools.
 
-YouTube Analytics API (Source)
+Advanced Features
 
-Enterprise Spreadsheet Connectors: Microsoft Excel / Office 365 (Source).
+💡 Unstructured Data Parsing (AI Ingestion): Ingest PDFs, Word docs, and images from S3/Google Drive, using AI to extract structured JSON on the fly.
 
-ClickHouse Source: Reverse ETL capabilities to extract aggregated metrics from ClickHouse and sync them back to operational tools.
+💡 Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself.
 
-Vector Database Destinations: Connectors for Pinecone, Weaviate, and Milvus to power AI RAG directly from operational data.
+💡 Developer API & Token Management: API token generation to allow programmatic access to Saddle Data.
 
-Unstructured Data Parsing (AI Ingestion): Ingest PDFs, Word docs, and images from S3/Google Drive, using AI to extract structured JSON on the fly.
+💡 Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
 
-Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself.
-
-Developer API & Token Management: API token generation to allow programmatic access to Saddle Data.
-
-Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
-
-GitOps (Flows as Code): Manage Saddle Data pipeline configurations natively via Git pull requests.
+💡 GitOps (Flows as Code): Manage Saddle Data pipeline configurations natively via Git pull requests.
