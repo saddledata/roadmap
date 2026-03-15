@@ -32,6 +32,16 @@ Legend
 
 ✅ Recently Shipped
 
+Data Governance & Catalog (New!)
+
+🚀 Centralized Data Asset Registry: Decoupled schemas from individual flows into a centralized, reusable asset library acting as a single source of truth.
+
+🚀 Global Impact Analysis (Blast Radius): Visual dependency mapping showing exactly which downstream flows will be affected by an upstream schema change.
+
+🚀 Centralized Security Policies & PII: Column-level tagging (PII, PHI, Sensitive) with Automated Enforcement that auto-injects Hash/Mask transformations across all dependent flows.
+
+🚀 Schema Time Machine: Automated version control and historical change tracking for source schemas, complete with human-readable AI summaries of upstream changes.
+
 AI Data Infrastructure
 
 🚀 Vector Database Destinations: Native sinking to Pinecone, Qdrant, Milvus, and PostgreSQL (pgvector) to power AI RAG directly from operational data.
