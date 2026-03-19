@@ -32,7 +32,7 @@ Legend
 
 ✅ Recently Shipped
 
-Data Governance & Catalog (New!)
+Data Governance & Catalog
 
 🚀 Centralized Data Asset Registry: Decoupled schemas from individual flows into a centralized, reusable asset library acting as a single source of truth.
 
@@ -41,6 +41,22 @@ Data Governance & Catalog (New!)
 🚀 Centralized Security Policies & PII: Column-level tagging (PII, PHI, Sensitive) with Automated Enforcement that auto-injects Hash/Mask transformations across all dependent flows.
 
 🚀 Schema Time Machine: Automated version control and historical change tracking for source schemas, complete with human-readable AI summaries of upstream changes.
+
+Core Infrastructure & Security
+
+🚀 Infrastructure as Code (IaC) & GitOps: Manage your entire data stack programmatically using declarative YAML configurations. Fully supports CI/CD automation, version control, and idempotent API deployments.
+
+🚀 Developer API & Token Management: Generate secure API tokens to programmatically interact with the Saddle Data platform and deploy infrastructure.
+
+🚀 Sync State (Cursors) & API Management: Full transparency and control over incremental sync progress. View, rewind, or reset cursors via the UI or REST API to seamlessly recover from downstream errors without full truncations. Backed by strict Audit Logging.
+
+🚀 Agent Resilience & Self-Healing: Non-blocking connection logic prevents panics during destination DB blips. Includes automatic reconciliation loops.
+
+🚀 Developer Experience (DX): Streamlined local agent testing with SADDLEDATA_SKIP_TLS_VERIFY and standardized API URL environment variables.
+
+🚀 Security (2FA/MFA): Secured user accounts with TOTP-based authentication.
+
+🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure with zero-trust outbound-only polling.
 
 AI Data Infrastructure
 
@@ -86,16 +102,6 @@ Observability & Monitoring
 
 🚀 Remote Agent Monitoring: Heartbeat tracking for self-hosted agents with automated "Agent Offline" alerting.
 
-Core Infrastructure & Security
-
-🚀 Agent Resilience & Self-Healing: Non-blocking connection logic prevents panics during destination DB blips. Includes automatic reconciliation loops.
-
-🚀 Developer Experience (DX): Streamlined local agent testing with SADDLEDATA_SKIP_TLS_VERIFY and standardized API URL environment variables.
-
-🚀 Security (2FA/MFA): Secured user accounts with TOTP-based authentication.
-
-🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure with zero-trust outbound-only polling.
-
 Transformations & Activation
 
 🚀 Intelligent Auto-Map: Your personal AI Data Scientist that handles schema profiling, normalization, and suggests multi-table pipeline structures on the fly.
@@ -140,8 +146,4 @@ Advanced Features
 
 💡 Data Quality Observability: Proactive alerting for "Inference Integrity." Detect anomalies in the data itself.
 
-💡 Developer API & Token Management: API token generation to allow programmatic access to Saddle Data.
-
 💡 Smart Schema Defaults: Community-powered auto-mapping suggestions for common data sources.
-
-💡 GitOps (Flows as Code): Manage Saddle Data pipeline configurations natively via Git pull requests.
