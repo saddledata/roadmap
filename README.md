@@ -34,11 +34,15 @@ Legend
 
 Data Governance & Catalog
 
+🚀 Governance Control Center: Centralized UI for compliance officers to define global Data Tags (PII, PHI), author mandatory transformation policies, and monitor violation audit logs.
+
+🚀 Automated Security Policies: Dynamic auto-injection of locked Hash/Mask transformations across all flows based on Catalog tags. Updating a policy automatically syncs the security requirements across your entire pipeline fleet.
+
+🚀 Execution Circuit Breakers: Worker-level runtime validation that physically aborts any sync attempting to bypass security policies (e.g., via rogue IaC scripts or API overrides), ensuring zero-trust data protection.
+
 🚀 Centralized Data Asset Registry: Decoupled schemas from individual flows into a centralized, reusable asset library acting as a single source of truth.
 
 🚀 Global Impact Analysis (Blast Radius): Visual dependency mapping showing exactly which downstream flows will be affected by an upstream schema change.
-
-🚀 Centralized Security Policies & PII: Column-level tagging (PII, PHI, Sensitive) with Automated Enforcement that auto-injects Hash/Mask transformations across all dependent flows.
 
 🚀 Schema Time Machine: Automated version control and historical change tracking for source schemas, complete with human-readable AI summaries of upstream changes.
 
@@ -119,6 +123,8 @@ Transformations & Activation
 🚧 Cloud Storage & Data Lakes (AWS S3 / GCS): Building an "S3 Bucket Watcher" for robust file-drop ingestion (CSV/JSON/Parquet), and partitioned file writers for destination lakes. (This is a core prerequisite for our upcoming Redshift integration).
 
 📝 Next (Up Next)
+
+📝 SQLMesh Integration: Native support for triggering SQLMesh data transformation pipelines immediately after ingestion, embracing the Open Data Infrastructure (ODI) standard alongside our existing dbt Core integration.
 
 📝 Amazon Redshift (Destination): High-performance enterprise loading utilizing AWS S3 internal staging and native Redshift COPY commands for massive ingestion scale.
 
