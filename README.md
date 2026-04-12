@@ -32,99 +32,49 @@ Legend
 
 ✅ Recently Shipped
 
+AI Reliability & Trust (New!)
+
+🚀 LLM Validation Gateway: A high-performance, synchronous API that acts as an opinionated contract layer for AI outputs. Automatically repairs malformed JSON and performs aggressive type coercion in real-time.
+
+🚀 Autonomous AI SRE: An AI Site Reliability Engineer that monitors broken pipelines, analyzes raw logs/stack traces, and provides root-cause diagnosis in plain English.
+
+🚀 Intelligent Auto-Map: Your personal AI Data Architect. Profiles raw source data (including MongoDB/Webhooks) to automatically suggest schema mappings and normalization strategies.
+
+🚀 Hallucination Detection: Silent integration with pii-hound during the validation phase to detect and flag unexpected sensitive data (SSNs, Keys) hallucinated by AI models.
+
 Data Governance & Catalog
 
-🚀 Governance Control Center: Centralized UI for compliance officers to define global Data Tags (PII, PHI), author mandatory transformation policies, and monitor violation audit logs.
+🚀 Governance Control Center: Centralized UI to define global Data Tags (PII, PHI) and author mandatory transformation policies.
 
-🚀 Automated Security Policies: Dynamic auto-injection of locked Hash/Mask transformations across all flows based on Catalog tags. Updating a policy automatically syncs the security requirements across your entire pipeline fleet.
-
-🚀 Execution Circuit Breakers: Worker-level runtime validation that physically aborts any sync attempting to bypass security policies (e.g., via rogue IaC scripts or API overrides), ensuring zero-trust data protection.
-
-🚀 Centralized Data Asset Registry: Decoupled schemas from individual flows into a centralized, reusable asset library acting as a single source of truth.
-
-🚀 Global Impact Analysis (Blast Radius): Visual dependency mapping showing exactly which downstream flows will be affected by an upstream schema change.
+🚀 Execution Circuit Breakers: Worker-level runtime validation that physically aborts any sync attempting to bypass security policies (e.g., via rogue IaC scripts or API overrides).
 
 🚀 Schema Time Machine: Automated version control and historical change tracking for source schemas, complete with human-readable AI summaries of upstream changes.
 
+🚀 Global Impact Analysis (Blast Radius): Visual dependency mapping showing exactly which downstream flows will be affected by an upstream schema change.
+
 Core Infrastructure & Security
 
-🚀 Infrastructure as Code (IaC) & GitOps: Manage your entire data stack programmatically using declarative YAML configurations. Fully supports CI/CD automation, version control, and idempotent API deployments.
+🚀 Infrastructure as Code (IaC) & GitOps: Manage your entire data stack programmatically using declarative YAML configurations. Fully supports CI/CD automation and version control.
 
 🚀 Developer API & Token Management: Generate secure API tokens to programmatically interact with the Saddle Data platform and deploy infrastructure.
 
-🚀 Sync State (Cursors) & API Management: Full transparency and control over incremental sync progress. View, rewind, or reset cursors via the UI or REST API to seamlessly recover from downstream errors without full truncations. Backed by strict Audit Logging.
-
-🚀 Agent Resilience & Self-Healing: Non-blocking connection logic prevents panics during destination DB blips. Includes automatic reconciliation loops.
-
-🚀 Developer Experience (DX): Streamlined local agent testing with SADDLEDATA_SKIP_TLS_VERIFY and standardized API URL environment variables.
-
-🚀 Security (2FA/MFA): Secured user accounts with TOTP-based authentication.
+🚀 Sync State (Cursors) & API Management: Full transparency and control over incremental sync progress. View, rewind, or reset cursors via the UI or REST API.
 
 🚀 Remote Agents (Hybrid Data Plane): Securely run Saddle Data workers inside your own VPC or infrastructure with zero-trust outbound-only polling.
-
-AI Data Infrastructure
-
-🚀 Vector Database Destinations: Native sinking to Pinecone, Qdrant, Milvus, and PostgreSQL (pgvector) to power AI RAG directly from operational data.
-
-🚀 In-Flight AI Embeddings: Zero-config Google Gemini and OpenAI (BYOK) embedding middleware. Transform text columns into dense mathematical vectors in transit without custom Python scripts.
-
-Enterprise & Analytics Connectors
-
-🚀 Enterprise SFTP (Source & Destination): Secure file transfer protocol support for legacy system integration and partner data exchange (CSV, JSON, JSONL) with smart auto-type inference.
-
-🚀 Email & Excel Delivery (Destination): Automated Reverse ETL delivery of formatted Microsoft Excel (.xlsx) and CSV reports directly to executive inboxes via SMTP2Go/SendGrid.
-
-🚀 Google Sheets Source: Directly ingest data from Google Workspace spreadsheets.
-
-🚀 Snowflake Destination: Enterprise-grade loading using internal stages for high volume and Merge support for upserts.
-
-🚀 Databricks Destination: Native integration for Delta Lake.
-
-🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
-
-🚀 Webhook Source: High-throughput event ingestion gateway with built-in rate limiting and buffering (Redis-backed).
-
-🚀 MongoDB Source: Automatic flattening of BSON documents to SQL tables.
-
-🚀 Google Analytics 4 (GA4) Source: Extracting raw event and traffic data from GA4 properties.
 
 Real-Time Enterprise Streaming
 
 🚀 High-Performance Stream Agents: Double-buffered architecture with asynchronous stats reporting, enabling high-volume bursts and sub-second latency for enterprise streaming flows.
 
-🚀 WebSocket Gateway Optimization: Tuned the stream-gateway for larger fetch sizes and reduced latency, including automatic ws:// to wss:// protocol upgrades.
-
-🚀 Streaming UI Dashboard: Tailored Flow Detail pages specifically for real-time throughput, hiding irrelevant batch metrics and replacing them with persistent Total Rows and Total Errors counters.
-
-Observability & Monitoring
-
-🚀 Self-Serve UI Telemetry: Lightweight, first-party tracking SDK piping UI usage data and backend system_events directly into our own ClickHouse analytics tables for end-to-end user journey visibility.
-
-🚀 Advanced Streaming Observability: Ingestion error tracking detects webhook failures (e.g., rate limits/body read errors) and pushes them directly to the flow's health dashboard.
-
-🚀 Observability & Alerting Engine: Real-time Activity Feed and Alert Rules. All stream lifecycle events provide a clear audit trail.
-
-🚀 Remote Agent Monitoring: Heartbeat tracking for self-hosted agents with automated "Agent Offline" alerting.
-
-Transformations & Activation
-
-🚀 Intelligent Auto-Map: Your personal AI Data Scientist that handles schema profiling, normalization, and suggests multi-table pipeline structures on the fly.
-
-🚀 Saddle Data AI SRE: Autonomous error diagnosis. Analyzes worker logs to explain failures in plain English and provides step-by-step remediation (e.g., fixing schema drift).
-
-🚀 Reverse ETL Templates: Pre-built patterns for syncing warehouse data back to operational tools.
-
-🚀 dbt Core Integration: Native support for running dbt projects immediately after data ingestion.
-
-🚀 Visual Schema Mapping: Explicit control over destination column types with intelligent implicit casting.
+🚀 ClickHouse Destination: High-throughput, batch-optimized event streaming into ClickHouse for real-time analytics.
 
 🚧 In Progress
 
-🚧 Cloud Storage & Data Lakes (AWS S3 / GCS): Building an "S3 Bucket Watcher" for robust file-drop ingestion (CSV/JSON/Parquet), and partitioned file writers for destination lakes. (This is a core prerequisite for our upcoming Redshift integration).
+🚧 Cloud Storage & Data Lakes (AWS S3 / GCS): Building an "S3 Bucket Watcher" for robust file-drop ingestion and partitioned file writers for destination lakes. (Prerequisite for Redshift integration).
 
 📝 Next (Up Next)
 
-📝 SQLMesh Integration: Native support for triggering SQLMesh data transformation pipelines immediately after ingestion, embracing the Open Data Infrastructure (ODI) standard alongside our existing dbt Core integration.
+📝 SQLMesh Integration: Native support for triggering SQLMesh data transformation pipelines immediately after ingestion, alongside our existing dbt Core integration.
 
 📝 Amazon Redshift (Destination): High-performance enterprise loading utilizing AWS S3 internal staging and native Redshift COPY commands for massive ingestion scale.
 
@@ -132,21 +82,7 @@ Transformations & Activation
 
 📝 Fanout DAG Dependencies: Support for triggering multiple downstream flows from a single upstream flow (One-to-Many orchestration).
 
-📝 Shopify Source (OAuth): Upgrading the Shopify connector to a Public App model.
-
 💡 Later / Ideas
-
-New Connectors
-
-💡 Amazon Redshift (Source): Extracting aggregated analytics models out of Redshift for operational syncing.
-
-💡 Enterprise Spreadsheet Connectors: Microsoft Excel / Office 365 (OneDrive/SharePoint) via Microsoft Graph OAuth.
-
-💡 Marketing & Sales Connectors: Google Search Console, Apollo.io, YouTube Analytics API.
-
-💡 ClickHouse Source: Reverse ETL capabilities to extract aggregated metrics from ClickHouse and sync them back to operational tools.
-
-Advanced Features
 
 💡 Unstructured Data Parsing (AI Ingestion): Ingest PDFs, Word docs, and images from S3/Google Drive, using AI to extract structured JSON on the fly.
 
